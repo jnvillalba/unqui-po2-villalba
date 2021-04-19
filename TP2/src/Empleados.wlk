@@ -25,7 +25,6 @@ class Empleado{
 		return self.sueldoBruto() - self.retenciones()
 	}
 	
-	
 }
 
 class EmpleadoPermanente inherits Empleado{
@@ -94,4 +93,15 @@ class EmpleadoTemporal inherits Empleado{
 	}
 	
 
+}
+
+class EmpleadoContratado inherits Empleado{
+	
+	var property numeroContrato
+	var property medioDePago
+	
+	//Gastos Administrativos Contractuales
+	override method retenciones(){
+		return 50
+	}
 }
