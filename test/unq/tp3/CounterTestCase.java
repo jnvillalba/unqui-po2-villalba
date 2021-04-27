@@ -43,5 +43,13 @@ class CounterTestCase {
 		assertEquals(amount, 1);
 		}
 		
+		@Test
+		public void testOddNumbers() {
+		// Getting the even occurrences
+		int amount = counter.getOddOcurrences();
+		// I check the amount is the expected one
+		assertEquals(amount, 9);
+		}
+		
 }
 

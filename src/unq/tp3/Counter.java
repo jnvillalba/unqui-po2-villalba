@@ -18,6 +18,14 @@ public class Counter {
 		return pares;
 	}
 	
+	public ArrayList<Integer> numerosImpares() { 
+		ArrayList<Integer> impares = new ArrayList<Integer>();
+		for (Integer numero:numerosAContar ) {
+			if (numero%2!=0) 
+		    	impares.add(numero);
+		}
+		return impares;
+	}
 	
 
 	public void addNumber(int i) {
@@ -27,6 +35,11 @@ public class Counter {
 	public int getEvenOcurrences() {
 		// TODO Auto-generated method stub
 		return this.numerosPares().size();
+	}
+	
+	public int getOddOcurrences() {
+		// TODO Auto-generated method stub
+		return this.numerosImpares().size();
 	}
 	
 }
