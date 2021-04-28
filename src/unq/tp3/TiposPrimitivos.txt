@@ -1,0 +1,14 @@
+1. ¿Qué son los tipos de datos primitivos?
+Son los tipos de datos que ya vienen dados por el lenguaje
+
+2. ¿Cuál es la diferencia entre un int y un Integer?
+Int es un tipo de dato mientras que Integer es un objeto con un tipo de dato int
+
+
+3. ¿Si se define una variable de instancia de tipo int cual sería su valor predeterminado? ¿Y si se
+define una de tipo Integer? Haga la prueba en Eclipse.
+int = 0
+Integer = 
+
+4. Responder la pregunta del punto anterior (3), pero ahora en lugar de definir una variable de
+instancia se define una variable de método.
