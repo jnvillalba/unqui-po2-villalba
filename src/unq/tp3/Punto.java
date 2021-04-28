@@ -38,7 +38,5 @@ public class Punto {
 									  y = this.getY() + puntoASumar.getY());
 		return puntoSumado;
 	}
-	
- 
- 
+
 }
