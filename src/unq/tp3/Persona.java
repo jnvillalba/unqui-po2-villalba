@@ -31,6 +31,7 @@ public class Persona {
 	}
 
 	public int edad() {
+		//Esto esta mal la fecha da 1969
 		LocalDate fechaNac = this.convertToLocalDateViaInstant(this.getFecNacimiento());
 		Period edad = Period.between(fechaNac, LocalDate.now());
 		return  edad.getYears();

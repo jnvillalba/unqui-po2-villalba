@@ -1,6 +1,5 @@
 package unq.tp3;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Date;
 
@@ -18,11 +17,11 @@ class EquipoDeTrabajoTestCase {
 	
 	@BeforeEach
 	public void setUp() throws Exception {
-	persona1 = new Persona("j", "v", new Date(25/10/1998) );
-	persona2 = new Persona("n", "v", new Date(26/4/2002) );
-	p3 = new Persona("j", "n", new Date(25/10/1998) );
-	p4 = new Persona("jn", "v", new Date(25/10/1998) );
-	p5 = new Persona("j", "nv", new Date(25/10/1998) );
+	persona1 = new Persona("j", "v", new Date(1998/10/25) );
+	persona2 = new Persona("n", "v", new Date(2002/4/26) );
+	p3 = new Persona("j", "n", new Date(1998/10/25) );
+	p4 = new Persona("jn", "v", new Date(1998/10/25) );
+	p5 = new Persona("j", "nv", new Date(1998/10/25) );
 	
 	team1 = new EquipoDeTrabajo("e1");
 	team1.getIntegrantes().add(persona1);
@@ -35,7 +34,7 @@ class EquipoDeTrabajoTestCase {
 	@Test
 	public void promedioEquipoDe5() {
 		
-		System.out.println ("El promedio de edad es " + team1.edadTotalIntegrantes());
+		System.out.println (team1.edadTotalIntegrantes() );
 	}
 	
 }
