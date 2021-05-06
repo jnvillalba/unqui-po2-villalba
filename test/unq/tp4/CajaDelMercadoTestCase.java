@@ -15,20 +15,27 @@ class CajaDelMercadoTestCase {
 	private Producto pan;
 	private Producto huevo;
 	private Producto queso;
+	private Servicio servicio;
+	private Impuesto impuesto;
 	
 	@BeforeEach
 	public void setUp() throws Exception {
-	//Se crea el cliente y los productos
+	//Se crea el cliente, servicio, impuesto y los productos
 	caja = new Caja();
 	cliente = new Cliente();
 	pan = new Producto(15, 5);
 	huevo = new Producto(12, 6);
 	queso = new Producto(50, 1);
+	servicio = new Servicio(20, 5);
+	impuesto = new Impuesto(2);
 	
-	//Se agregan los prouctos al cliente
+	//Se agregan los pagables al cliente
 	cliente.registrar(pan);
 	cliente.registrar(huevo);
 	cliente.registrar(queso);
+	cliente.registrar(servicio);
+	cliente.registrar(impuesto);
+	
 	}
 	
 	@Test
@@ -36,7 +43,7 @@ class CajaDelMercadoTestCase {
 	// Getting the even occurrences
 	float amount = caja.montoTotal(cliente);
 	// I check the amount is the expected one
-	assertEquals(amount, 15+12+50);
+	assertEquals(amount, 15+12+50+100+2);
 	}
 	
 	@Test
