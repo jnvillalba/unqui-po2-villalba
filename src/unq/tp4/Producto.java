@@ -2,30 +2,31 @@ package unq.tp4;
 
 public class Producto {
 	
-	private Float precio;
-	private Float stock;
+	private float precio;
+	private int stock;
 	
-	public Producto(Float precio, Float stock) {
+	public Producto(float i, int j) {
 		super();
-		this.setPrecio(precio);
-		this.setStock(stock);
+		this.setPrecio(i);
+		this.setStock(j);
 	}
 
-	public Float getPrecio() {
+	public float getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(Float precio) {
+	public void setPrecio(float precio) {
 		this.precio = precio;
 	}
 
-	public Float getStock() {
+	public int getStock() {
 		return stock;
 	}
 
-	public void setStock(Float stock) {
+	public void setStock(int stock) {
 		this.stock = stock;
 	}
+
 	
 	public void decrementarStock() {
 		stock-= 1;

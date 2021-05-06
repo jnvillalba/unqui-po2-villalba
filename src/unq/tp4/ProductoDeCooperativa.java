@@ -2,14 +2,14 @@ package unq.tp4;
 
 public class ProductoDeCooperativa extends Producto{
 	
-	private Float iva;
+	private float iva;
 
-	public ProductoDeCooperativa(Float precio, Float stock, Float iva) {
+	public ProductoDeCooperativa(float precio, int stock, float iva) {
 		super(precio, stock);
 		this.setIva(iva);
 	}
 
-	public Float getIva() {
+	public float getIva() {
 		return iva;
 	}
 

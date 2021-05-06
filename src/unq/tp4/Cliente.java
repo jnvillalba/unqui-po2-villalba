@@ -25,6 +25,14 @@ public class Cliente {
 		this.productos = productos;
 	}
 	
+	public float montoTotal() {
+		float montoTotal = 0;
+		for (Producto producto: productos) {
+			montoTotal+= producto.getPrecio();
+		}
+		return montoTotal;
+	}
+	
 	
 	
 
