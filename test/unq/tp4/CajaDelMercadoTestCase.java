@@ -10,6 +10,7 @@ import unq.tp4.Producto;
 
 class CajaDelMercadoTestCase {
 	
+	private Caja caja;
 	private Cliente cliente;
 	private Producto pan;
 	private Producto huevo;
@@ -18,6 +19,7 @@ class CajaDelMercadoTestCase {
 	@BeforeEach
 	public void setUp() throws Exception {
 	//Se crea el cliente y los productos
+	caja = new Caja();
 	cliente = new Cliente();
 	pan = new Producto(15, 5);
 	huevo = new Producto(12, 6);
@@ -32,7 +34,7 @@ class CajaDelMercadoTestCase {
 	@Test
 	public void testCliente() {
 	// Getting the even occurrences
-	float amount = cliente.montoTotal();
+	float amount = caja.montoTotal(cliente);
 	// I check the amount is the expected one
 	assertEquals(amount, 15+12+50);
 	}

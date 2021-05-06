@@ -1,6 +1,6 @@
 package unq.tp4;
 
-public class Producto {
+public class Producto implements Pagable {
 	
 	private float precio;
 	private int stock;
@@ -10,7 +10,12 @@ public class Producto {
 		this.setPrecio(i);
 		this.setStock(j);
 	}
-
+	
+	@Override
+	public float montoAPagar() {
+		return getPrecio();
+	}
+	
 	public float getPrecio() {
 		return precio;
 	}
@@ -30,6 +35,12 @@ public class Producto {
 	
 	public void decrementarStock() {
 		stock-= 1;
+	}
+
+	@Override
+	public void regsitrar() {
+		this.decrementarStock();
+		
 	}
 	
 }

@@ -4,37 +4,26 @@ import java.util.ArrayList;
 
 public class Cliente {
 	
-	private ArrayList<Producto> productos;
+	private ArrayList<Pagable> pagables;
 	
 	public Cliente() {
 		super();
-		this.productos = new ArrayList<Producto>();
+		this.pagables = new ArrayList<Pagable>();
 		
 	}
 	
-	public void registrar(Producto producto){
-		this.getProductos().add(producto);
-		producto.decrementarStock();
+	public void registrar(Pagable pagable){
+		this.getProductos().add(pagable);
+		pagable.regsitrar();
 	}
 
-	public ArrayList<Producto> getProductos() {
-		return productos;
+	public ArrayList<Pagable> getProductos() {
+		return pagables;
 	}
 
-	public void setProductos(ArrayList<Producto> productos) {
-		this.productos = productos;
+	public void setProductos(ArrayList<Pagable> productos) {
+		this.pagables = productos;
 	}
-	
-	public float montoTotal() {
-		float montoTotal = 0;
-		for (Producto producto: productos) {
-			montoTotal+= producto.getPrecio();
-		}
-		return montoTotal;
-	}
-	
-	
-	
 
 }
 
