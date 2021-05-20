@@ -6,7 +6,7 @@ public class Inmueble {
 	private String direccion;
 	private Float valorFiscal;
 	
-	public Inmueble(String descripcion, String direccion, Float valorFiscal) {
+	public Inmueble(String descripcion, String direccion, float valorFiscal) {
 		super();
 		this.setDescripcion(descripcion);
 		this.setDireccion(direccion);

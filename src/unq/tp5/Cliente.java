@@ -63,12 +63,12 @@ public class Cliente {
 	
 	public void solicitarCreditoPersonal(Banco banco, float monto, float plazoEnMeses) {
 		Solicitud nuevaSolicitud = new SolicitudCreditoPersonal(this, monto, plazoEnMeses);
-		banco.registarSolicitud(nuevaSolicitud);
+		SistemaInformaticoBancario.agregarNuevaSolicitudAlBanco(nuevaSolicitud, banco);
 	}
 	
 	public void solicitarCreditoHipotecario(Banco banco, float monto, float plazoEnMeses, Inmueble inmueble) {
 		Solicitud nuevaSolicitud = new SolicitudCreditoHipotecario(this, monto, plazoEnMeses, inmueble);
-		banco.registarSolicitud(nuevaSolicitud);
+		SistemaInformaticoBancario.agregarNuevaSolicitudAlBanco(nuevaSolicitud, banco);
 	}
 	
 	public float recibirCredito(float monto) {

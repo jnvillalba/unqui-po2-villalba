@@ -41,6 +41,15 @@ public class Banco {
 		solicitud.getCliente().recibirCredito(solicitud.getMonto());
 	}
 	
+	public ArrayList<Solicitud> solicitudesAceptadas() {
+		ArrayList<Solicitud> solicitudesAceptadas = new ArrayList<Solicitud>();
+		for(Solicitud solicitud: this.getSolicitudes()) {
+			if(solicitud.evaluar()) {
+				solicitudesAceptadas.add(solicitud);
+			}
+		}
+		return solicitudesAceptadas;
+	}
 	
 	
 }
