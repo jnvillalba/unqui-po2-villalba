@@ -1,0 +1,24 @@
+Cliente de e-mail
+2. Detecte las violaciones a los principios SOLID
+
+1. La clase ClienteEMail viola al princio Single Responsability, podria tener una clase Inbox
+	que sea el responsable de las casillas de inbox y borrados.
+
+
+2. Rompe el Open Close principle, la clase ClienteEMail define el servidor con una variable de tipo Servidor
+	cuando deberia definir la interfaz.
+	De esta manera si surge un nuevo tipo de servidor tambien se aceptaria de igual forma por la clase ClienteEMail.
+
+3. Viola Inversion de Dependencias, antes tenia 2 arraylist de correos, ahora tiene 2 Instancias de Inbox,
+	con mensajes mas entendibles y abstractos.
+
+
+
+
+
+
+
+
+
+
+
