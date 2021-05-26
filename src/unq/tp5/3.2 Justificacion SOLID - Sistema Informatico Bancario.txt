@@ -1,0 +1,3 @@
+
+*El UML cumple con solid, todas las clases tienen una unica responsabilidad (Single Responsability)
+*Las Solicitudes estan abiertas a subclases por lo cual pueden extenderse sin modificar codigo(Open Close)
