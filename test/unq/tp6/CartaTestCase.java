@@ -2,6 +2,8 @@ package unq.tp6;
 
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -82,6 +84,7 @@ public class CartaTestCase {
 		
 		//Verify
 		assertTrue(poker.verificar(P2, C2, P6, P10, C10) == "Nada");
+		verify(poker, times(1)).verificar(P2, C2, P6, P10, C10);
 	}
 	
 	// Color = las cinco cartas son del mismo color y palo
@@ -110,6 +113,13 @@ public class CartaTestCase {
 		assertTrue(poker.verificar(P2, C2, D2, P4, C10) == "Trio");
 	}
 	
+	@Test
+	void testManoGanadora() {
+		String manoConPoker = poker.verificar(P2, C2, D2, T2, C10);
+		
+		//Test Double Configuration
+		when(manoConPoker).thenReturn("Poker");
+	}
 	
 
 }
