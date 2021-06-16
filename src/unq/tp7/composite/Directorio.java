@@ -5,7 +5,7 @@ import java.util.Date;
 
 
 
-public class Directorio extends FileSystem {
+public class Directorio implements FyleSystem {
 	private String nombre;
 	private Date fechaCreacion;
 	private ArrayList<FileSystem> contenido;
@@ -34,6 +34,31 @@ public class Directorio extends FileSystem {
 	}
 	public void setContenido(ArrayList<FileSystem> contenido) {
 		this.contenido = contenido;
+	}
+
+	@Override
+	public int totalSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void printStructure() {
+		System.out.println(this.getNombre());
+		
+	}
+
+	@Override
+	public Date lastModified() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void oldestElement() {
+		// TODO Auto-generated method stub
+		//ultimo o primero de la lista?
+		
 	}
 
 }

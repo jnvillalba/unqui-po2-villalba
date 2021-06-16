@@ -1,5 +1,7 @@
 package unq.tp7.composite;
 
+import java.util.Date;
+
 public interface FyleSystem {
 	
 	/*Retorna el total ocupado en disco del receptor. Expresado en
@@ -13,7 +15,7 @@ public interface FyleSystem {
 	
 	
 	/* Elemento mas nuevo*/
-	public void lastModified();
+	public Date lastModified();
 	
 	
 	/* Elemento mas antiguo*/
