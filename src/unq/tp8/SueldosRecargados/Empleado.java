@@ -3,17 +3,18 @@ package unq.tp8.SueldosRecargados;
 
 
 public abstract class Empleado {
-	private String nombre;
 	private String estadoCivil;
 	private int sueldoBasico;
 	private int cantHijes;
 	
-	public String getNombre() {
-		return nombre;
+	public Empleado(String estadoCivil, int sueldoBasico, int cantHijes) {
+		super();
+		this.setEstadoCivil(estadoCivil);
+		this.setSueldoBasico(sueldoBasico);
+		this.setCantHijes(cantHijes);
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+	
+	
 	public String getEstadoCivil() {
 		return estadoCivil;
 	}
@@ -35,7 +36,7 @@ public abstract class Empleado {
 		this.cantHijes = cantHijes;
 	}
 	
-	private int sueldoBruto() {
+	protected final int sueldoBruto() {
 		return this.getSueldoBasico() + this.extraHorasDeTrabajo() + this.extraFamiliar();
 	}
 	
@@ -51,11 +52,11 @@ public abstract class Empleado {
 		return this.getCantHijes() >= 1;
 	}
 	
-	private int retenciones(){
-		return (this.sueldoBruto() *13)/100;
+	protected int retenciones(){
+		return  (this.sueldoBruto()*13)/100;
 	}
 	
-	public final int sueldo() {
+	public final float sueldo() {
 		return this.sueldoBruto() - this.retenciones();		
 	}
 	

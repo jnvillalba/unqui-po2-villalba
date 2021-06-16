@@ -12,6 +12,14 @@ public class EmpleadoPasante extends Empleado {
 		this.cantHorasTrabajoMensuales = cantHorasTrabajoMensuales;
 	}
 	
+	
+	
+	public EmpleadoPasante(String estadoCivil, int sueldoBasico, int cantHijes,
+			int cantHorasTrabajoMensuales) {
+		super(estadoCivil, sueldoBasico, cantHijes);
+		this.setCantHorasTrabajoMensuales(cantHorasTrabajoMensuales);
+	}
+
 	@Override
 	protected int extraHorasDeTrabajo() {
 		return 40 * this.getCantHorasTrabajoMensuales();
