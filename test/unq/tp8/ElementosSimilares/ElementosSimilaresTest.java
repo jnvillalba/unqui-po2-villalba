@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 import java.util.*;
 import org.junit.jupiter.api.*;
 
-class ElementosSimilares {
+class ElementosSimilaresTest {
 	private Wikipedia laPlata;
 	private Wikipedia lucasArt;
 	private Wikipedia lobo;
