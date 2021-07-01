@@ -11,14 +11,14 @@ public class CuentaCorriente extends CuentaBancaria {
 	 public int getDescubierto(){
 		 return this.descubierto;
 	 }
+
+	@Override
+	protected boolean cumpleConLaCondicionDelTipoDeCuenta(int monto) {
+		// TODO Auto-generated method stub
+		return this.getSaldo()+this.getDescubierto()>=monto;
+	}
 	
-	 @Override
-	 public void extraer(int monto) {
-		 if(this.getSaldo()+this.getDescubierto()>=monto){
-			 this.setSaldo(this.getSaldo()-monto);
-			 this.agregarMovimientos("Extraccion");
-		 }
-	 }
+	 
 
 }
 

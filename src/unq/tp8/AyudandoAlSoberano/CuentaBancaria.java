@@ -30,6 +30,20 @@ public abstract class CuentaBancaria {
 		this.movimientos.add(movimiento);
 	}
 	
-	public abstract void extraer(int monto);
+	public void extraer(int monto) {
+		if(this.cumpleConLaCondicionDelTipoDeCuenta(monto)){
+			 this.setSaldo(this.getSaldo()-monto);
+			 this.agregarMovimientos("Extraccion");
+		 }
+	}
+
+	protected abstract boolean cumpleConLaCondicionDelTipoDeCuenta(int monto);
 	
+	
+	//1. Se cambia el metodo abstracto extraer por uno que realice la operacion si se cumple la condicion,
+	//   la cual dependera de cada sublcase.
+	
+
+	//2. La clase Abstracta seria la cuenta Bacaria y sus herencias las concretas. 
+	//	 El metodo extraer(int monto) es el Template method y el hook seria cumpleConLaCondicionDelTipoDeCuenta(int monto)
 }
