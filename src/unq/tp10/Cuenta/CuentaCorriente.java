@@ -1,4 +1,4 @@
-package cuenta;
+package unq.tp10.Cuenta;
 
 public class CuentaCorriente extends CuentaBancaria{
 	private Integer limiteDescubierto;

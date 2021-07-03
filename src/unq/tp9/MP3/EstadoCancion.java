@@ -8,7 +8,7 @@ public abstract class EstadoCancion {
 
 	public abstract void stop(Song song);
 
-	protected boolean estaEnSeleccion() {
+	public boolean estaEnSeleccion() {
 		return false;
 	}
 

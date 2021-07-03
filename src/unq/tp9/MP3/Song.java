@@ -4,9 +4,6 @@ public class Song {
 	
 	private EstadoCancion estado;
 
-	public EstadoCancion getEstado() {
-		return estado;
-	}
 
 	public void setEstado(EstadoCancion estado) {
 		this.estado = estado;

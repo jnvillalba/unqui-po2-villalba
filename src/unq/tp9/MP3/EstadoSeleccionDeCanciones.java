@@ -20,7 +20,7 @@ public class EstadoSeleccionDeCanciones extends EstadoCancion{
 	}
 	
 	@Override
-	protected boolean estaEnSeleccion() {
+	public boolean estaEnSeleccion() {
 		return true;
 	}
 

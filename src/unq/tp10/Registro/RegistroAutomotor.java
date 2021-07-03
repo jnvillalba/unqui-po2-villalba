@@ -1,4 +1,4 @@
-package automotor;
+package unq.tp10.Registro;
 
 import java.time.LocalDate;
 
