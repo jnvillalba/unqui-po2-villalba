@@ -1,4 +1,4 @@
-package unq.tp8PalabrasOrdenadas;
+package unq.tp8.PalabrasOrdenadas;
 
 import java.awt.Rectangle;
 
