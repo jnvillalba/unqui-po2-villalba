@@ -9,11 +9,9 @@ public class CuentaCorriente extends CuentaBancaria{
 	}
 	
 	@Override
-	public void extraer(Integer monto) {
-		if(this.saldo + this.limiteDescubierto >= monto)
-			this.saldo = saldo - monto;
-			this.historialDeMovimientos.registrarMovimiento("Extracción", monto);
-			this.notificador.notificarNuevoSaldoACliente(this);
+	protected boolean condicionDeExtraccion(Integer monto) {
+		// TODO Auto-generated method stub
+		return this.saldo + this.limiteDescubierto >= monto;
 	}
 
 }

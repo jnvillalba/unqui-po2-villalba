@@ -15,6 +15,14 @@ public abstract class CuentaBancaria {
 	public int getSaldo() {
 		return saldo;
 	}
-	
-	public abstract void extraer(Integer monto);
+	//Template
+	public final void extraer(Integer monto) {
+		if(this.condicionDeExtraccion(monto)) {
+			this.saldo = saldo - monto;
+			this.historialDeMovimientos.registrarMovimiento("Extracción", monto);
+			this.notificador.notificarNuevoSaldoACliente(this);
+		}
+	}
+
+	protected abstract boolean condicionDeExtraccion(Integer monto);
 }
